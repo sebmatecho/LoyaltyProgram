@@ -76,8 +76,8 @@ nueva = pd.DataFrame.from_dict(test,orient='columns')
 # nueva
 
 client = boto3.client('s3',
-            aws_access_key_id = 'AKIAW6IPH3CTUNR7ATJS',
-            aws_secret_access_key = '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')
+            aws_access_key_id = st.secrets['AWSAccessKeyId'],
+            aws_secret_access_key = st.secrets['AWSSecretKey'])
 
 list_names = ['Patrimonio','Ingresos_Mensuales','No_hijos','monto_credito',
                'tasa', 'saldo_capital','saldo_Ahorro','Antiguedad_en_meses',
