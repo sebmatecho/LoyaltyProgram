@@ -1,5 +1,3 @@
-from sklearn.preprocessing import MinMaxScaler
-
 import numpy as np
 import datetime
 import streamlit as st
