@@ -5,4 +5,4 @@ streamlit
 pandas
 joblib
 boto3
-xgboost
+xgboost==1.4.2
