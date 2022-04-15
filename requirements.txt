@@ -4,4 +4,3 @@ streamlit
 pandas
 joblib
 boto3
-tempfile
