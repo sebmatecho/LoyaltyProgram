@@ -5,3 +5,4 @@ streamlit
 pandas
 joblib
 boto3
+xgboost
