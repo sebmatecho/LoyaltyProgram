@@ -37,7 +37,7 @@ After selecting the XGBoost model, a hyperparamenter tuning process was pursued.
 
 Once the best model was selected, a dashboard was deployed to assist decision-nmaking on potential new customers for the program. The final product is fully deployed in Streamlit and AWS (S3 for model and transformation). It looks like as the following:
 
-<img src="test.gif" width="1000" height="550" />
+<img src="test.gif" width="1000" height="500" />
 
 
 Final App available [here](https://share.streamlit.io/sebmatecho/loyaltyprogram/app_loyalty.py)
