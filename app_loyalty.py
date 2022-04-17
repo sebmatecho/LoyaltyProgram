@@ -48,17 +48,17 @@ This app should provide a handy way to determine if a client is worhty to send a
 with st.sidebar.form(key='my_form'):
     st.subheader('General information')
     Edad = st.slider('Age', 0, 130, 25)
-    Patrimonio = st.number_input('Wealth')
-    Ingresos_Mensuales = st.number_input('Montly Income (COP)')
-    No_hijos = st.number_input('Number of dependants')
+    Patrimonio = st.number_input('Wealth',value = 745968)
+    Ingresos_Mensuales = st.number_input('Montly Income (COP)',value = 1614094)
+    No_hijos = st.number_input('Number of dependants',value = 0 )
     fecha_ult_desembolso = st.date_input("Last disbursement date (yyyy/mm/dd)", datetime.date(2019, 7, 6))
-    monto_credito = st.number_input('Loan amount')
-    tasa = st.number_input('Interest Rate (year)')
-    saldo_capital = st.number_input('Principal Balance')
-    saldo_Ahorro = st.number_input('Savings Balance')
-    Antiguedad_en_meses = st.number_input('Antiquity (months)')
-    Max_dias_mora = st.number_input('Max days after due date')
-    plazo_dias = st.number_input('days until due date')
+    monto_credito = st.number_input('Loan amount',value = 1500000)
+    tasa = st.number_input('Interest Rate (year)',value = 33.93)
+    saldo_capital = st.number_input('Principal Balance',value = 1357387)
+    saldo_Ahorro = st.number_input('Savings Balance',value = 33438)
+    Antiguedad_en_meses = st.number_input('Antiquity (months)',value = 12)
+    Max_dias_mora = st.number_input('Max days after due date',value =0 )
+    plazo_dias = st.number_input('days until due date',value = 900)
     mes_ult_desembolso = fecha_ult_desembolso.month
 
     ciudad = st.selectbox(
