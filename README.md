@@ -13,3 +13,4 @@ In general, initial dataset was initially delivered considerably clean. There we
 ## The final product
 
 Once the best model was selected, a dashboard was deployed to assist decision-nmaking on potential new customers for the program. The final product is fully deployed in Streamlit and AWS (S3 for model and transformation). Final App available [here](https://share.streamlit.io/sebmatecho/loyaltyprogram/app_loyalty.py)
+<img src="test.gif" width="300" height="550" />
