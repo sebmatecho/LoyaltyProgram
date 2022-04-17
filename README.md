@@ -20,27 +20,18 @@ Some remarks:
 ## Data preparation. 
 Once columns were understood, transformations were put in place. MinMaxScaler was selected for all numerical values, as no normal variables were observed (standarized) and outliers were removed (RobustScaler). 
 ## Machine Learning models 
-Once variables were transformed, various machine Learning models were proposed. 
-
+Once variables were transformed, various machine Learning models were proposed in order to better predict if a customer will accept the invitation. For such purpose, a cross validation approach was used in combination 
 
 | Model Name | Accuracy  |
 |---|---|
-| XGBoost  |  0.848 +/- 0.030 |
-|  Random Forest	 |  0.713 +/- 0.025 |
-| KNN	  | 0.678 +/- 0.024  |   
-| Naive Bayes	  | 0.514 +/- 0.035  | 
-| Baseline  |  0.508 +/- 0.002 | 
-|  Logistic Regression	 | 0.508 +/- 0.002  | 
+| XGBoost  |  0.850 +/- 0.045 |
+|  Random Forest	 |  0.710 +/- 0.053 |
+| KNN	  | 0.511 +/- 0.049 |   
+| Baseline |0.505 +/- 0.002 | 
+| Logistic Regression | 0.505 +/- 0.002| 
+| Naive Bayes | 0.504 +/- 0.049 | 
 
-
-	
-	
-
-
-
-	
-
-
+After selecting the XGBoost model, a hyperparamenter tuning process was pursued. For this end, a bayesian approach was preferred. After finding the best parameters the final model performed barely better (Accuracy of 0.859 +/- 0.041) and was thus, selected as final model. 
 
 ## The final product
 
