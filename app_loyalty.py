@@ -6,6 +6,9 @@ import pickle
 import joblib
 import boto3
 import tempfile
+st.set_page_config(
+    page_title="Loyalty Program App", page_icon="📊", 
+    initial_sidebar_state="expanded")
 # Header 
 st.markdown('''
 # *Loyalty program* 
@@ -26,23 +29,26 @@ To design a tool to better select customers when sending invitations out to such
 
 
 
-Edad = st.slider('Age', 0, 130, 25)
-Patrimonio = st.number_input('Wealth')
-Ingresos_Mensuales = st.number_input('Montly Income (COP)')
-No_hijos = st.number_input('Dependants')
-fecha_ult_desembolso = st.date_input("Last disbursement date (yyyy/mm/dd)", datetime.date(2019, 7, 6))
-monto_credito = st.number_input('Loan amount')
-tasa = st.number_input('Interest Rate (year)')
-saldo_capital = st.number_input('Principal Balance')
-saldo_Ahorro = st.number_input('Savings Balance')
-Antiguedad_en_meses = st.number_input('Antiquity (months)')
-Max_dias_mora = st.number_input('Max days after due date')
-plazo_dias = st.number_input('days until due date')
-mes_ult_desembolso = fecha_ult_desembolso.month
+with st.sidebar.form(key='my_form'):
+    st.subheader('General information')
+    Edad = st.slider('Age', 0, 130, 25)
+    Patrimonio = st.number_input('Wealth')
+    Ingresos_Mensuales = st.number_input('Montly Income (COP)')
+    No_hijos = st.number_input('Dependants')
+    fecha_ult_desembolso = st.date_input("Last disbursement date (yyyy/mm/dd)", datetime.date(2019, 7, 6))
+    monto_credito = st.number_input('Loan amount')
+    tasa = st.number_input('Interest Rate (year)')
+    saldo_capital = st.number_input('Principal Balance')
+    saldo_Ahorro = st.number_input('Savings Balance')
+    Antiguedad_en_meses = st.number_input('Antiquity (months)')
+    Max_dias_mora = st.number_input('Max days after due date')
+    plazo_dias = st.number_input('days until due date')
+    mes_ult_desembolso = fecha_ult_desembolso.month
 
-ciudad = st.selectbox(
-     'City',
-     ('Barranquilla', 'Bogotá', 'Cali','Cartagena'))
+    ciudad = st.selectbox(
+        'City',
+        ('Barranquilla', 'Bogotá', 'Cali','Cartagena'))
+    submit_button = st.form_submit_button(label='Calculate!')
 
 C_Barranquilla = 1 if ciudad == 'Barranquilla' else 0
 C_Bogotá = 1 if ciudad == 'Bogotá' else 0
