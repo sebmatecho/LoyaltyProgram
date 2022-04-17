@@ -145,7 +145,7 @@ X = X.sort_values('Prob_aceptar', ascending = False)
 st.write('Chances customer accepts invitation to join the program',100*X.loc[0,'Prob_aceptar'],'%')
 
 
-with st.expander("Details:"):
+with st.expander("Details"):
     st.markdown('''
     #### Context
     This dataset was provided by a Colombian bank who used it for technical assessments while looking to fill a Data Scientist position. 
