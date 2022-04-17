@@ -21,30 +21,10 @@ st.markdown('''
 ''')
 
 st.markdown('''
-
+This app should provide a handy way to determine if a client is worhty to send an invitation for a special loyalty program held by a colombian bank
 ''')
 
-with st.expander("Details:"):
-    st.markdown('''
-    #### Context
-    This dataset was provided by a Colombian bank who used it for technical assessments while looking to fill a Data Scientist position. 
-    #### The described scenario
-    The bank has a loyalty program and would only invite new customers to join every year. 
-    Customers in such program would have access to exclusive services within the bank portfolio. 
-    Formal invitation to the program is made through sending letter and some presents to potential customers. 
-    Now, the bank would like to be as effective as possible when selecting customers to invite to the program.
-    #### The data
-    This way, a dataset containing information on customers and the outcome on wheather he/she accepts or decline the invitation to join the program, based on prior years information, is presented.
-    #### The task
-    To design a tool to better select customers when sending invitations out to such program. 
-    #### The process
-    As expected, the data was indeed pretty clean. Other than setting the proper data types to each column 
-    and fixing some bugs in column's names, there was not much to be done in order to clean the data. 
-    After exploring data to gain expertise on it and considering various combinations of variables, variable transformations, 
-    models and metrics, a XGBoost model was selected, and then refined, using Bayesian optimizer. 
-    Such model displayed the following 
-    
-    ''')
+
 
     
 
@@ -165,3 +145,24 @@ X = X.sort_values('Prob_aceptar', ascending = False)
 st.write('Chances customer accepts invitation to join the program',100*X.loc[0,'Prob_aceptar'],'%')
 
 
+with st.expander("Details:"):
+    st.markdown('''
+    #### Context
+    This dataset was provided by a Colombian bank who used it for technical assessments while looking to fill a Data Scientist position. 
+    #### The described scenario
+    The bank has a loyalty program and would only invite new customers to join every year. 
+    Customers in such program would have access to exclusive services within the bank portfolio. 
+    Formal invitation to the program is made through sending letter and some presents to potential customers. 
+    Now, the bank would like to be as effective as possible when selecting customers to invite to the program.
+    #### The data
+    This way, a dataset containing information on customers and the outcome on wheather he/she accepts or decline the invitation to join the program, based on prior years information, is presented.
+    #### The task
+    To design a tool to better select customers when sending invitations out to such program. 
+    #### The process
+    As expected, the data was indeed pretty clean. Other than setting the proper data types to each column 
+    and fixing some bugs in column's names, there was not much to be done in order to clean the data. 
+    After exploring data to gain expertise on it and considering various combinations of variables, variable transformations, 
+    models and metrics, a XGBoost model was selected, and then refined, using Bayesian optimizer. 
+    Such model has 86% of accuracy. 
+    
+    ''')
