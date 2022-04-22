@@ -98,13 +98,9 @@ nueva = pd.DataFrame.from_dict(test,orient='columns')
 # nueva
 
 
-try:
-    client = boto3.client('s3',
-            aws_access_key_id = st.secrets['AWSAccessKeyId'],
-            aws_secret_access_key = st.secrets['AWSSecretKey'])
-except ClientError as e:
-    if e.response['Error']['Code'] == "InvalidObjectState":
-        pass
+client = boto3.client('s3',
+        aws_access_key_id = st.secrets['AWSAccessKeyId'],
+        aws_secret_access_key = st.secrets['AWSSecretKey'])
 
 
 list_names = ['Patrimonio','Ingresos_Mensuales','No_hijos','monto_credito',
