@@ -130,7 +130,7 @@ X = nueva[[ 'Patrimonio', 'Ingresos_Mensuales', 'No_hijos',
 
 with tempfile.TemporaryFile() as fp: 
     client.download_fileobj(Fileobj=fp, 
-                            Bucket='loyaltyprogrammodelandparameters',
+                            Bucket='loyaltyprogrammodelandparameters2',
                             Key='final_model.pkl')
     fp.seek(0)
     classifier2 = joblib.load(fp)
