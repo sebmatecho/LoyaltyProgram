@@ -108,7 +108,7 @@ for name in list_names:
 
     with tempfile.TemporaryFile() as fp: 
         client.download_fileobj(Fileobj=fp, 
-                                Bucket='loyaltyprogrammodelandparameters',
+                                Bucket='loyaltyprogrammodelandparameters2',
                                 Key=name+'.sav')
         fp.seek(0)
         mms = joblib.load(fp)
